@@ -84,6 +84,16 @@ a:hover {
   cursor: pointer;
 }
 
+.menu-icon-activo {
+  background-image: url(/images/icon-close-menu.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  width: 5rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
 @media (min-width: 768px) {
   .menu-icon {
     display: none;
