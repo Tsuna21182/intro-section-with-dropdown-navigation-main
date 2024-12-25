@@ -6,6 +6,8 @@ const dropContent = document.querySelector(".dropdown__content");
 const dropContent2 = document.querySelector(".dropdown__content-2");
 const Features = document.querySelector(".features-btn");
 const Company = document.querySelector(".company-btn");
+const about = document.querySelector(".about");
+const careers = document.querySelector(".careers");
 
 // Manejar el menú móvil
 menu.addEventListener("click", () => {
@@ -14,9 +16,15 @@ menu.addEventListener("click", () => {
   if (dropdownBtn.classList.contains("active")) {
     dropdownBtn.classList.remove("active");
     navDropdownBtn.classList.remove("active");
+    about.classList.remove("active");
+    careers.classList.remove("active");
+    login.classList.remove("active");
+    register.classList.remove("active");
   } else {
     dropdownBtn.classList.add("active");
     navDropdownBtn.classList.add("active");
+    about.classList.add("active");
+    careers.classList.add("active");
   }
 });
 

@@ -91,6 +91,7 @@ a:hover {
   background-size: 2.5rem;
   display: flex;
   flex-direction: column;
+  align-items: left;
   gap: 1rem;
   position: absolute;
   top: 5rem;
@@ -103,9 +104,6 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-  .header__nav {
-    justify-content: center;
-  }
   .menu-icon {
     display: flex;
     align-items: center;
@@ -113,8 +111,10 @@ a:hover {
   }
 }
 
-.header__nav a {
+.careers,
+.about {
   display: none;
+  padding: 0.5rem 2rem;
 }
 
 @media (min-width: 768px) {
@@ -172,12 +172,14 @@ a:hover {
 .dropdown {
   position: relative;
   display: flex;
+  margin-top: 2rem;
 }
 
 @media (min-width: 768px) {
   .nav__dropdown,
   .dropdown {
     display: block;
+    margin-top: 0;
   }
 }
 
@@ -188,8 +190,7 @@ a:hover {
   border: none;
   background-color: #fff;
   cursor: pointer;
-  margin-top: 3rem;
-  padding: 1rem 2rem;
+  padding: 0.2rem 2rem;
   display: none;
 }
 
