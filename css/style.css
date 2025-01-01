@@ -172,6 +172,7 @@ a:hover {
 .dropdown {
   position: relative;
   display: flex;
+  flex-direction: column;
   margin-top: 2rem;
 }
 
@@ -186,17 +187,19 @@ a:hover {
 .dropdown__btn {
   background-image: url(/images/icon-arrow-down.svg);
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: 11rem;
   border: none;
   background-color: #fff;
   cursor: pointer;
   padding: 0.2rem 2rem;
   display: none;
+  margin: 0 0 1rem 0;
 }
 
 @media (min-width: 768px) {
   .dropdown__btn {
     display: block;
+    padding: 0.2rem 2rem;
     margin: 0;
   }
 }
@@ -205,17 +208,17 @@ a:hover {
 .dropdown__content-2 {
   display: none;
   flex-direction: column;
-  position: absolute;
-  top: 4.5rem;
-  right: 0;
   background-color: #fff;
   padding: 0.5rem;
-  margin: 2rem 0;
+  margin: 0.5rem 0;
+  z-index: 1;
+  text-align: left;
   transition: all 0.3s ease-in-out;
 }
 
 @media (min-width: 768px) {
-  .dropdown__content {
+  .dropdown__content,
+  .dropdown__content-2 {
     display: none;
     position: absolute;
     top: 4.5rem;
@@ -234,10 +237,11 @@ a:hover {
   background-repeat: no-repeat;
   background-size: 2rem;
   background-position: 1rem;
+  font-size: 1.4rem;
 }
 .dropdown__content-2 a {
   display: block;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   background-image: none;
   font-size: 1.4rem;
 }
@@ -256,11 +260,10 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-  .nav__dropdown:hover .dropdown__content {
-    display: block;
-  }
-  .dropdown:hover .dropdown__content-2 {
-    display: block;
+  .dropdown__content,
+  .dropdown__content-2 {
+    position: absolute;
+    top: 2rem;
   }
 }
 
